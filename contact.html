@@ -43,22 +43,57 @@
             <p>下記フォームに必要事項を入力後、確認ボタンを押してください。</p>
             <form class="formrun" action="https://form.run/api/v1/r/ojqw6ovq9eolwqobsqaxc7i9" method="post">
                 <!-- ↓自由に要素を追加・編集することができます -->
-                <div class="m-name formbox">
-                    <label>お名前</label>
-                    <input name="お名前" type="text">
-                </div>
-            
-                <div class="m-mail formbox">
-                    <label>メールアドレス [必須]</label>
-                    <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required>
-                    <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
-                </div>
-            
-                <div class="m-contentbox formbox">
-                    <label>お問い合わせ [必須]</label>
-                    <textarea name="お問い合わせ" data-formrun-required></textarea>
-                    <div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
-                </div>
+                <table class="formTable">
+                <tr>
+                <th>ご用件</th>
+                <td><select name="ご用件">
+                    <option value="">選択してください</option>
+                    <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
+                    <option value="リンクについて">その他</option>
+                    </select></td>
+                </tr>
+                <tr>
+                <th>お名前</th>
+                <td><input size="20" type="text" name="お名前" /> ※必須</td>
+                </tr>
+                <tr>
+                <th>電話番号（半角）</th>
+                <td><input size="30" type="text" name="電話番号" /></td>
+                </tr>
+                <tr>
+                <th>Mail（半角）</th>
+                <td><input size="30" type="text" name="Email" /> ※必須</td>
+                </tr>
+                <!-- <tr>
+                <th>性別</th>
+                <td>
+                    <label for="男"><input type="radio" name="性別" value="男" id="男"/> 男 </label>
+                    <label for="女"><input type="radio" name="性別" value="女" id="女" /> 女 </label>
+                </td>
+                </tr> -->
+                <tr>
+                <th>内容（複数選択可）</th>
+                <td>
+                    <input name="内容[]" type="checkbox" value="Webサイト構築" id="Webサイト構築" /><label for="Webサイト構築">Webサイト構築</label><br>
+                    <label for="Webサイト集客相談"><input name="内容[]" type="checkbox" value="Webサイト集客相談" id="Webサイト集客相談" />Webサイト集客相談</label><br>
+                    <label for="SEO対策"><input name="内容[]" type="checkbox" value="SEO対策" id="SEO対策" />SEO対策</label><br>
+                    <label for="ランディングページ制作"><input name="内容[]" type="checkbox" value="ランディングページ制作" id="ランディングページ制作" />ランディングページ制作</label><br>
+                    <label for="Webマーケティング"><input name="内容[]" type="checkbox" value="Webマーケティング"id="Webマーケティング" />Webマーケティング</label><br>
+                </td>
+                </tr>
+                <tr>
+                <th>サイトの種類</th>
+                <td>
+                    <label for="企業サイト"><input name="サイトの種類[]" type="radio" value="企業サイト"id="企業サイト" />企業サイト</label><br>
+                    <label for="店舗サイト"><input name="サイトの種類[]" type="radio" value="店舗サイト"id="店舗サイト" />店舗サイト</label><br>
+                    <label for="個人サイト"><input name="サイトの種類[]" type="radio" value="個人サイト"id="個人サイト" />個人サイト</label><br>
+                </td>
+                </tr>
+                <tr>
+                <th>お問い合わせ内容<br /></th>
+                <td><textarea name="お問い合わせ内容" cols="50" rows="5"></textarea></td>
+                </tr>
+            </table>
             
                 <!-- <div>
                 <label>個人情報利用同意 [必須]</label>
