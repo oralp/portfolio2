@@ -60,9 +60,10 @@
                 <th>電話番号（半角）</th>
                 <td><input size="30" type="text" name="電話番号" /></td>
                 </tr>
-                <tr>
+                <tr class="m-mail formbox">
                 <th>Mail（半角）</th>
-                <td><input type="text" data-formrun-type="email" data-formrun-required /> ※必須</td>
+                <td><input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required>
+                    <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div> ※必須</td>
                 </tr>
                 <!-- <tr>
                 <th>性別</th>
