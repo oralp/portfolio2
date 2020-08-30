@@ -1,0 +1,723 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 游ゴシック, YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
+    position: relative;
+    /* background-color: rgb(240, 240, 240); */
+}
+main{
+    max-width: 1500px;
+    /* background-color: white; */
+    margin: auto;
+}
+h1,h2,h3{
+    margin: 0;
+}
+h2{
+    font-size: 40px;
+    padding: 30px;
+}
+main h2{
+    padding-bottom: 10px;
+    margin-right: 30%;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #333;
+}
+h3{
+    font-size: 30px;
+}
+
+@media screen and (max-width:800px){
+    h2{
+        font-size: 30px;
+    }
+    main h2{
+        padding: 10px;
+    }
+    h3{
+        font-size: 20px;
+    }
+}
+
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+.fadeInRight{
+    opacity : 0;
+    transform: translateX(50px);
+    transition: 1s;
+}
+.fadeInLeft{
+    opacity : 0;
+    transform: translateX(-50px);
+    transition: 1s;
+}
+a{
+    text-decoration: none;
+    color: #333;
+    transition: .3s;
+}
+a:hover{
+    color: rgb(0, 81, 255);
+}
+
+
+.button {
+    display: inline-block;
+    width: 200px;
+    height: 54px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 54px;
+    outline: none;
+  }
+  .button::before,
+  .button::after {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    content: '';
+  }
+  .button,
+  .button::before,
+  .button::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .button {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(rgb(90, 255, 24),rgb(1, 97, 22)) ;
+    border: 2px solid rgb(0,80,17);
+    color: #333;
+    line-height: 50px;
+    overflow: hidden;
+  }
+  .button:hover {
+    color: #fff;
+    border: 2px solid #333;
+  }
+  .button::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+  }
+  .button:hover::after {
+    background: rgb(0,80,17);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+
+main.m-contact{
+    /* padding: 100px; */
+    padding-top: 50px;
+    margin-bottom: 59px;
+}
+
+/* main{
+    display: grid;
+    grid-template:
+    "... ....... ..."
+    "... about   ..."
+    "... ....... ..."
+    "... service ..."
+    "... ....... ..."
+    "... works   ..."
+    "... ....... ..."
+    "... contact ..."
+    "... ....... ..." ;
+}
+.about{
+    grid-area: about;
+}
+.service{
+    grid-area: service;
+}
+.works{
+    grid-area: works;
+}
+.contact{
+    grid-area: contact;
+} */
+
+/**************************************************************************
+    Header
+***************************************************************************/
+header.index{
+    height: 100vh;
+    background: linear-gradient(rgb(255,255,255,0.6), rgb(0,0,0,0.6)), url("../img/digital-marketing-1725340_1920.jpg");
+    background-size: cover;
+    /* color: white; */
+}
+header{
+    margin-top: 65px;
+
+}
+.header-text{
+    padding: 10% 0;
+}
+header h1{
+    font-size: 50px;
+    margin: 30px;
+}
+header p{
+    font-size: 30px;
+    margin: 30px;
+}
+header .button{
+    margin: 30px;
+}
+header .button{
+    background: #333;
+    color: #fff;
+    border: 2px solid #333;
+}
+header .button:hover{
+    color: #333;
+}
+header .button:hover::after{
+    background: #fff;
+}
+
+@media screen and (max-width:800px){
+    header{
+        margin-top: 0;
+    }
+    header h1{
+        font-size: 30px;
+    }
+    header p{
+        font-size: 20px;
+    }
+}
+/***************************************************
+    Nav
+***************************************************/
+
+nav{
+    /* position: absolute;
+    top: 0; */
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.7);
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+nav h2{
+    flex: 5;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+}
+nav ul{
+    flex: 4;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+nav ul li{
+    width: 100%;
+    text-align: center;
+    /* border-left: 1px solid #333; */
+}
+nav ul li a{
+    /* height: 100%; */
+    padding: 20px;
+    display: block;
+    transition: .5s;
+}
+nav ul li a:hover{
+    /* border-bottom: 2px solid rgb(0, 81, 255); */
+    background-color: rgb(95, 95, 95);
+    color: white;
+}
+nav ul li .active{
+    /* border-bottom: 2px solid rgb(0, 81, 255); */
+    background-color: rgb(95, 95, 95);
+    color: white;
+}
+
+@media screen and (max-width:800px){
+    nav h2{
+        display: none;
+    }
+    nav{
+        top: unset;
+        bottom: 0;
+    }
+    nav ul li a{
+        padding: 20px calc(100% / 5);
+        font-size: 0.8em;
+    }
+}
+/**************************************************************************
+    Main
+***************************************************************************/
+
+/***************************************************
+    Problem
+***************************************************/
+.problem{
+    /* background-color: rgb(69, 101, 131);
+    color: white; */
+}
+.problem h2{
+    border-bottom: 3px solid #333;
+}
+.problem-box{
+    padding: 30px;
+    max-width: 880px;
+    margin: auto;
+}
+.problem .button-box{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.problem .button{
+    width: 80%;
+}
+.problem-box p{
+    font-size: 20px;
+    padding: 30px 0;
+    color: tomato;
+}
+ul.problem{
+    box-sizing: border-box;
+    list-style: square;
+}
+ul.solution{
+    list-style: none;
+}
+/* ul.problem li::before{
+    content:  "";
+}  */
+ul.solution li::before{
+    content: "☑︎";
+    font-size: 30px;
+}
+ul.solution{
+    border: 1px solid #333;
+    max-width: 880px;
+    margin: auto;
+    padding: 20px 5%;
+    font-size: 20px;
+}
+.problem .button{
+    margin: 30px;
+}
+.problem .button{
+    background: #333;
+    color: #fff;
+    border: 2px solid #333;
+}
+.problem .button:hover{
+    color: #333;
+}
+.problem .button:hover::after{
+    background: #fff;
+}
+@media screen and (max-width:800px){
+    ul.problem{
+        padding: 10px;
+    }
+}
+/***************************************************
+    About
+***************************************************/
+.about{
+    min-height: calc(100vh - 84px - 50px);
+}
+.table-box{
+    display: grid;
+    grid-template: 
+    "... ...... ... ...... ..."
+    "... table1 ... table2 ..."
+    "... ...... ... ...... ..."
+    /50px 1fr 50px 1fr 50px;
+}
+.table1{
+    grid-area: table1;
+}
+.table1 dd{
+    margin-left: 0;
+    padding-left: 30px;
+    border-bottom: 1px solid #333;
+}
+.table2{
+    grid-area: table2;
+}
+@media screen and (max-width:800px){
+    .table-box{
+        grid-template:
+        "... ...... ..."
+        "... table1 ..."
+        "... table2 ..."
+        "... ...... ..." 
+        /20px 1fr 20px;
+    }
+}
+/***************************************************
+    Service
+***************************************************/
+.service{
+    padding-bottom: 50px;
+}
+.service h2{
+    margin-bottom: 0;
+}
+.service-text{
+    padding: 30px;
+}
+.service-text-box{
+    display: grid;
+    grid-template:
+    "... text-box-p ... text-box-img ..." 
+    /auto 3fr 50px 2fr auto;
+}
+.service-text-box p{
+    grid-area: text-box-p;
+    margin: auto;
+}
+.service-text-box .img{
+    grid-area: text-box-img;
+}
+.service p.head{
+    font-size: 30px;
+}
+.service ul.service-box{
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template:
+    "... web-site ... web-marketing ..."
+    "... system   ... support       ..." ;
+}
+.service-box li{
+    background-color: white;
+}
+.web-site{
+    grid-area: web-site;
+}
+.web-marketing{
+    grid-area: web-marketing;
+}
+.system{
+    grid-area: system;
+}
+.support{
+    grid-area: support;
+}
+.service-box > li{
+    padding: 30px;
+    margin: 10px;
+    border: 0.7px solid #333;
+}
+
+ul.service-box ul{
+    list-style: none;
+}
+ul.service-box ul li:before {
+    content:  "";     /* 空の要素作成 */
+    width:  10px;               /* 幅指定 */
+    height:  10px;              /* 高さ指定 */
+    display:  inline-block;     /* インラインブロックにする */
+    background-color: #F44336;  /* 背景色指定 */
+    border-radius:  50%;        /* 要素を丸くする */
+}
+.web-site{
+    /* background-image: url("../img/website.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center; */
+    /* height: 50vh; */
+}
+.web-site div{
+    /* background-color: rgba(255, 145, 145, 0.7);
+    height: calc(100% - 60px); */
+    /* padding: 30px; */
+}
+.web-marketing{
+    /* background-image: url("../img/marketing.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh; */
+}
+.web-marketing div{
+    /* background-color: rgba(255, 238, 144, 0.7);
+    height: calc(100% - 60px); */
+    /* padding: 30px; */
+}
+.system{
+    /* background-image: url("../img/support.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh; */
+}
+.system div{
+    /* background-color: rgba(145, 255, 249, 0.7);
+    height: calc(100% - 60px); */
+    /* padding: 30px; */
+}
+@media screen and (max-width:800px){
+    .service-text-box{
+        grid-template:
+        "... text-box-p   ..."
+        "... ............ ..." 80px
+        "... text-box-img ..." ;
+    }
+    .service-text-box img{
+        width: 70%;
+    }
+    .service-text-box .img{
+        text-align: center;
+    }
+    .service ul.service-box{
+        grid-template:
+        "... web-site      ..."
+        "... web-marketing ..."
+        "... system        ..."
+        "... support       ..." ;
+    }
+    .web-site,
+    .web-marketing,
+    .system{
+        height: unset;
+    }
+    .service p.head{
+        font-size: 1.5em;
+    }
+}
+/***************************************************
+    Works
+***************************************************/
+.works{
+    background-color: rgb(224, 223, 223);
+    padding-bottom: 50px;
+}
+.works .button-box{
+    text-align: center;
+    margin: 30px;
+}
+.swiper-container {
+	width: 100%;
+    height: 370px;
+}
+.swiper-slide {
+	padding-top: 180px; 
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+}
+.swiper-slide{
+    background-size: cover;
+}
+.slide1{
+    background-image: url("../img/test1.png");
+}
+.slide2{
+    background-image: url("../img/test2.png");
+}
+.slide3{
+    background-image: url("../img/sample-page.jpg");
+}
+.slide4{
+    background-image: url("../img/sample-page2.png");
+}
+@media screen and (max-width:1100px){
+    .swiper-container{
+        height: 250px;
+    }
+}
+@media screen and (max-width:800px){
+    .swiper-container{
+        height: 150px;
+    }
+}
+
+
+
+
+
+
+
+.m-works{
+    max-width: 1300px;
+    margin: auto;
+}
+.m-works ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.m-works ul li{
+    width: calc(50% - 60px);
+    padding: 30px;
+    margin: 30px;
+    box-shadow: 2px 2px 4px;
+    box-sizing: border-box;
+    background-color: rgb(245, 245, 245);
+}
+.m-works ul li .img{
+    height: 50vh;
+    overflow: scroll;
+    margin-bottom: 30px;
+}
+.m-works dt{
+    padding: 10px 0;
+    font-weight: 700;
+    color: #333;
+}
+.m-works dd{
+    margin: 0;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+.works .button{
+    background: #333;
+    color: #fff;
+    border: 2px solid #333;
+}
+.works .button:hover{
+    color: #333;
+}
+.works .button:hover::after{
+    background: #fff;
+}
+
+@media screen and (max-width:950px){
+    .m-works ul{
+        flex-direction: column;
+    }
+    .m-works ul li{
+        width: calc(100% - 60px);
+    }
+    .m-works dd{
+        padding-left: 0;
+    }
+    .m-works ul li .img{
+        height: 30vh;
+    }
+}
+/***************************************************
+    Contact
+***************************************************/
+.contact-box{
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/john-schnobrich-2FPjlAyMQTA-unsplash.jpg");
+    background-size: cover;
+    color: white;
+    padding: 10px;
+}
+
+.contact .solution{
+    text-align: left;
+    border: 1px solid white;
+}
+
+.contact .button{
+    width: 80%;
+    margin: 50px;
+}
+
+
+@media screen and (max-width:800px){
+    .contact-text,
+    .contact-button{
+        text-align: center;
+    }
+    .contact .button{
+        margin: 10px;
+    }
+}
+/**************************************************************************
+    Footer
+***************************************************************************/
+
+footer{
+    background-color: rgb(0, 17, 65);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+@media screen and (max-width:800px){
+    footer{
+        margin-bottom: 59px;
+    }
+}
+
+
+
+
+
+
+/*****************************************************************************
+    form
+*****************************************************************************/
+#formWrap {
+	width:700px;
+	margin:0 auto;
+	color:#555;
+	line-height:120%;
+	font-size:90%;
+}
+table.formTable{
+	width:100%;
+	margin:0 auto;
+	border-collapse:collapse;
+}
+table.formTable td,table.formTable th{
+	border:1px solid #ccc;
+	padding:10px;
+}
+table.formTable th{
+	width:30%;
+	font-weight:normal;
+	background:#efefef;
+	text-align:left;
+}
+/*　簡易版レスポンシブ用CSS（必要最低限のみとしています。ブレークポイントも含め自由に設定下さい）　*/
+@media screen and (max-width:800px) {
+    #formWrap {
+        width:95%;
+        margin:0 auto;
+    }
+    table.formTable th, table.formTable td {
+        width:auto;
+        display:block;
+    }
+    table.formTable th {
+        margin-top:5px;
+        border-bottom:0;
+    }
+    input[type="text"], textarea {
+        width:80%;
+        padding:5px;
+        font-size:110%;
+        display:block;
+    }
+    input[type="submit"], input[type="reset"], input[type="button"] {
+        display:block;
+        width:100%;
+        height:40px;
+    }
+}
