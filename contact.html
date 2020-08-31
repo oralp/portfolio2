@@ -73,8 +73,19 @@
                 </tr>
                 <tr class="m-mail formbox">
                 <th>Mail（半角）　 ※必須</th>
-                <td><input name="Email" type="text" data-formrun-type="email" data-formrun-required>
-                    <div data-formrun-show-if-error="Email">メールアドレスを正しく入力してください</div></td>
+                <td>
+                    <label class="col-xs-3 col-form-label" for="email">メールアドレス</label>
+                    <div class="col-xs-9" data-formrun-hide-if-confirm>
+                        <input class="form-control" id="email" name="メールアドレス"
+                        data-formrun-class-if-success="form-control-success" data-formrun-class-if-error="form-control-danger"
+                        data-formrun-required data-formrun-type="email" data-formrun-class-if-success="form-control-success" data-formrun-class-if-error="form-control-danger">
+
+                        <div class="text-danger" data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+                    </div>
+                    <div class="col-xs-9" data-formrun-show-if-confirm>
+                        <span data-formrun-confirm-value="メールアドレス"></span>
+                    </div>
+                </td>
                 </tr>
                 <!-- <tr>
                 <th>性別</th>
