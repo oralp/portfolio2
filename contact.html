@@ -55,7 +55,17 @@
                 </tr>
                 <tr>
                 <th>お名前　 ※必須</th>
-                <td><input size="20" type="text" name="お名前" data-formrun-required /><div data-formrun-show-if-error="お名前">お名前を正しく入力してください</div></td>
+                <td>
+                    <label class="col-xs-3 col-form-label" for="name">お名前</label>
+                    <div class="col-xs-9" data-formrun-hide-if-confirm>
+                        <input type="text" class="form-control" id="name" name="お名前"
+                            data-formrun-required data-formrun-class-if-success="form-control-success" data-formrun-class-if-error="form-control-danger">
+                        <div class="text-danger" data-formrun-show-if-error="お名前">お名前を正しく入力してください</div>
+                    </div>
+                    <div class="col-xs-9" data-formrun-show-if-confirm>
+                        <span data-formrun-confirm-value="お名前"></span>
+                    </div>
+                </td>
                 </tr>
                 <tr>
                 <th>電話番号（半角）</th>
